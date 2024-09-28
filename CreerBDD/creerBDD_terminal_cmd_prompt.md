@@ -11,4 +11,13 @@ sur un terminal prompt dans un projet symfony deja crée et ouvrer un terminal c
 Tapper `php bin/console doctrine:database:create`\ 
 Aller verfier que la table se soit bien crée sur php MyAdmin
 
+## Bonus : parmétres Doctrine 
+`php bin/console doctrine`
+
+
+
+
+
+
+
 
