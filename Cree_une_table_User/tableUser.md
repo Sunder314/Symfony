@@ -12,9 +12,6 @@ puis rentrer le nom de l'entité et les attributs voulu\
 enpuyer sur entrer quand on demande si vous coulez ajouter un attriubut pour arreter le script\
 Esuite aller voir le fichier crée et regarder les functions associées\
 ensuite\
-si une migration a déjà etait faite : \
-`php bin/console doctrine:migrations:migrate`\
-sinon \
 `php bin/console make:migration`\
 `php bin/console doctrine:migrations:migrate`
 racourcis clavier \
