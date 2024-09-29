@@ -9,7 +9,7 @@ ici j'ai ajouté :\
         ]);
     }`\
   a la suite des autres routes\
-  ##Modifier le fichier security.yaml
+  ## Modifier le fichier security.yaml
   Ensuite rendez-vous dans le fichier security.yaml (Config/package/security.yaml)\
   et modifier la ligne : `# target: any_direction`\
   par : `target: app_loggedout`
