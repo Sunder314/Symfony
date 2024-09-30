@@ -11,4 +11,8 @@ avant le "/html"
 ## Pour rendre le site encore plus beau 
 
 Aller dans votre fichier twig.html (config/package)\
-et ajouter : `form_themes: ['booststrap_5_layout.html.twig']`
+et ajouter : `form_themes: ['bootstrap_5_layout.html.twig']`
+
+## Ajouter une barre de navigation
+
+
