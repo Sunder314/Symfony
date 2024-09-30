@@ -62,5 +62,5 @@ remplacer :\
 par : \
 `        <div class="container">
             {% block body %}{% endblock %}
-        </div>' 
+        </div>`
 
