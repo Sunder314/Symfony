@@ -9,8 +9,8 @@ Chosisiez à quel entity apparatient le formulaire ici : Product\
 Donnez lui un nom ici : ProductController\
 ## Modification du controller
 Rendez vous dans le fichier Productcontroller (src/Controller/ProductController) qui viens d'être crée\
-`namespace App\Controller;
 
+`namespace App\Controller;
 use App\Entity\Product;
 use App\Form\ProductType;
 use Doctrine\ORM\EntityManagerInterface;
