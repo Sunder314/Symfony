@@ -55,10 +55,9 @@ class ProductController extends AbstractController
 
 }`
 Copié coller ce code dans la page et modifé les parmétre pour qu'il soit adapté a la l'entity du formulaire\
-Pour en savoir plus sur les commandes utilisées renseignez vous
+Pour en savoir plus sur les commandes utilisées renseignez vous\
 Exemple : j'ai crée un nouveaux formulaire pour l'entity Category\
 J'ai suivis le inscrustion puis j'ai modifié le code du Controller crée plus tot comme suivant\
-<?php
 
 `namespace App\Controller;
 
