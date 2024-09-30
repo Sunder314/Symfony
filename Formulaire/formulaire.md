@@ -56,6 +56,57 @@ class ProductController extends AbstractController
 }`
 Copié coller ce code dans la page et modifé les parmétre pour qu'il soit adapté a la l'entity du formulaire\
 Pour en savoir plus sur les commandes utilisées renseignez vous
+Exemple : j'ai crée un nouveaux formulaire pour l'entity Category\
+J'ai suivis le inscrustion puis j'ai modifié le code du Controller crée plus tot comme suivant\
+<?php
+
+`namespace App\Controller;
+
+use App\Entity\Category;
+use App\Form\CategoryControllerType;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;`
+
+`class CategoryController extends AbstractController
+{
+    #[Route('/category', name: 'app_category')]
+    public function index(): Response
+    {
+        return $this->render('category/index.html.twig', [
+            'controller_name' => 'CategoryController',
+        ]);
+    }
+
+    #[Route('/category/add', name: 'app_add_category')]
+    public function addCategory(Request $request, EntityManagerInterface $em): Response
+    {
+        // Charger le formulaire
+        $category = new Category();
+        $form = $this->createForm(CategoryControllerType::class,$category);
+
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()) {
+            $em->persist($category);
+            $em->flush();
+
+            return $this->redirectToRoute('app_category');
+        }
+
+
+        return $this->render('category/add.html.twig', [
+            'form' => $form->createView(),
+        ]);
+
+    }
+}`\
+Analyser les différence pour bien comprendre comment crée un formulaire et aider vos des erreurs pour comprendre où ca bloque
+
+
+
 ## Ajouter une categorie 
 Aller sur phpMyAdmin et ajouter une catégorie a la main 
 ## Amélioré le formulaire
