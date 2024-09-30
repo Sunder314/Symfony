@@ -17,12 +17,25 @@ class AppFixtures extends Fixture
     {
         $user = new User();
         $user->setNom('Joffrey')->setPrenom('Halland');
-        $user->setEmail('lolito@gmail.com');
+        $user->setEmail('user@gmail.com');
         $encoded = $this->encoder->hashPassword($user,'123');
         $user->setPassword($encoded);
         $user->setRoles(['ROLE_USER']);
-        $manager->persist($user);
+        
 
+        $employee = new User();
+        $encoded = $this->encoder->hashPassword($employee,'123');
+        $employee->setNom('Fabre')->setPrenom('Tom')->setPassword($encoded)->setRoles(['ROLE_EMPLOYEE'])->setEmail('employee@gmail.com');
+
+        $admin = new User(); 
+        $encoded = $this->encoder->hashPassword($admin,'123');
+        $admin->setNom('Damiennus')->setPrenom('BenoitSaintDenis')->setEmail('admin@gmail.com')->setPassword($encoded)->setRoles(['ROLE_ADMIN']);
+
+
+
+        $manager->persist($user);
+        $manager->persist($employee);
+        $manager->persist($admin);
         $manager->flush();
     }
 }
