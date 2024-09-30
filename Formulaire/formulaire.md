@@ -56,5 +56,14 @@ class ProductController extends AbstractController
 }`
 Copié coller ce code dans la page\
 Pour en savoir plus sur les commandes utilisées renseignez vous
-
+## Ajouter une categorie 
+Aller sur phpMyAdmin et ajouter une catégorie a la main 
+## Amélioré le formulaire
+Retourner sur le fichier ProductType et tapper : \
+`            ->add('category', EntityType::class, [
+                'class' => Category::class,
+'choice_label' => 'id',
+            ])
+        ;`\
+    A la place de ->add('category');
 
