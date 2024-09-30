@@ -62,7 +62,11 @@ Aller sur phpMyAdmin et ajouter une catégorie a la main
 Retourner sur le fichier ProductType et tapper : \
 `            ->add('category', EntityType::class, [
                 'class' => Category::class,
-'choice_label' => 'id',
+                'choice_label' => 'id',
+                'choice_label' => 'name',
+                'placeholder' => 'choisir une categorie',
+                'label' => 'Catégorie'
+
             ])
         ;`\
     A la place de ->add('category');
