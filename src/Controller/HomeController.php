@@ -22,5 +22,12 @@ class HomeController extends AbstractController
             'controller_name' => 'Controller de page contact',
         ]);
     }
+    #[Route('/loggedout', name: 'app_loggedout')]
+    public function logout(): Response
+    {
+        return $this->render('security/logout.html.twig', [
+            'controller_name' => 'Controller de page contact',
+        ]);
+    }
 
 }
