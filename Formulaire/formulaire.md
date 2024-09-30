@@ -54,7 +54,7 @@ class ProductController extends AbstractController
 
 
 }`
-Copié coller ce code dans la page\
+Copié coller ce code dans la page et modifé les parmétre pour qu'il soit adapté a la l'entity du formulaire\
 Pour en savoir plus sur les commandes utilisées renseignez vous
 ## Ajouter une categorie 
 Aller sur phpMyAdmin et ajouter une catégorie a la main 
