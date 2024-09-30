@@ -8,6 +8,7 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class ProductType extends AbstractType
 {
@@ -21,8 +22,11 @@ class ProductType extends AbstractType
             ->add('date_add')
             ->add('category', EntityType::class, [
                 'class' => Category::class,
-'choice_label' => 'id',
+                'choice_label' => 'name',
+                'placeholder' => 'choisir une categorie',
+                'label' => 'Catégorie'
             ])
+            ->add('save', SubmitType::class);
         ;
     }
 
