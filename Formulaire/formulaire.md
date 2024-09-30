@@ -70,4 +70,6 @@ Retourner sur le fichier ProductType et tapper : \
             ])
         ;`\
     A la place de ->add('category');
-
+## Ajouter un button submit 
+A la suite des add->...\
+ajouter : `add->('save', SubmitType::class)`
