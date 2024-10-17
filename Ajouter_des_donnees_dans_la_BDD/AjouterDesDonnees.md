@@ -1,6 +1,6 @@
 # Ajouter des données grâce à une table Fixture
 ## Charger les fictures 
-`composer require --dev orm-fictures`\
+`composer require --dev orm-fixtures`\
 ## Exploter la table Fixture 
 Regarder les modifaction et suivez les instruction pour modifier les différente fonction voulu\
 Ensuite aller dans le fichier src/DataFixture/AppFixtures\
