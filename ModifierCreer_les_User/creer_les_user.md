@@ -11,4 +11,12 @@ Allez dans le fichier UserType.php (src/form/userTyper.php) et modifier le fichi
                 'multiple'=> false,
                 'mapped' => false,`
             `])`\
-**ayyy**
+allez dans le UserController (src/Controller/UserController.php)\
+Analyser le fichier\
+puis aller dans la route **\new**\
+dans puiblic fonction .. rajouter dans la parentèse `UserPasswordHasherInterface $passwordHasher`\
+ensuite apres le if : \ 
+rajouter : `$encoded = $passwordHasher->hashPassword($user,$form->get('password')->getData());`\
+            `$tabrole = [$form->get('roles')->getData()];`\
+            `$user->setRoles($tabrole)->setEmail($form->get('email')->getData())->setNom($form->get('nom')->getData());`\
+            `$user->setPrenom($form->get('prenom')->getData())->setPassword($encoded);`
