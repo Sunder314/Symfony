@@ -1,4 +1,5 @@
 {{ form_start(form) }}
+
     <div class="row">
         <div class="col">
             {{form_row(form.email)}}
@@ -23,6 +24,13 @@
             {{form_row(form.prenom)}}
         </div>
     </div>
+
+        <div class="row">
+        <div class="col">
+            {{form_row(form.password)}}
+        </div>
+    </div>
+
 
     <button class="btn">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}

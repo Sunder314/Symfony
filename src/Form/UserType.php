@@ -24,11 +24,9 @@ class UserType extends AbstractType
                 'multiple'=> false,
                 'mapped' => false,
             ])
-            ->add('password',null, [
-                'data' => "",
-            ])
             ->add('nom')
             ->add('prenom')
+            ->add('password')
         ;
     }
 
