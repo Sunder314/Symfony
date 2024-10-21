@@ -1,4 +1,4 @@
-# Modifier le fomrulaire
+# Modifier formulaire
 Aprés avoir crée une table User puis avoir utilisé CRUD (voir CRUD/crud.md) sur cette table\
 Allez dans le fichier UserType.php (src/form/userTyper.php) et modifier le fichier : 
 `->add('roles',ChoiceType::class,[`\
@@ -11,6 +11,7 @@ Allez dans le fichier UserType.php (src/form/userTyper.php) et modifier le fichi
                 'multiple'=> false,
                 'mapped' => false,`
             `])`\
+# creer un nouveau user
 allez dans le UserController (src/Controller/UserController.php)\
 Analyser le fichier\
 puis aller dans la route **\new**\
