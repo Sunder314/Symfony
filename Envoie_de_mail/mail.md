@@ -28,14 +28,11 @@ dans le terminal `comoser require phpmailer/phpmailer`\
 ensuite dans src crée un dossier ou vous crée un fichier PHPMailService.php \
 dans le fichier : 
 `<?php
-
 namespace App\Service;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
-
 class PHPMailerService extends PHPMailer
 {
-
 public function __construct() {
 // configuration du mailer
 $this->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
@@ -45,9 +42,7 @@ $this->SMTPAuth   = true;                                   //Enable SMTP authen
 $this->Username   = 'gasparsundermann62@gmail.com';                     //SMTP username
 $this->Password   = 'jtifsyevflbjuuhj';                               //SMTP password
 $this->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-$this->Port       = 465; 
-}
-
+$this->Port       = 465; }
 }`
 
 
