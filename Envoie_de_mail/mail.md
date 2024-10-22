@@ -1,4 +1,4 @@
-# intialiser son Mailer DNS
+# Intialiser son Mailer DNS
 sur votre compte google crée un mot de passe d'application (il faut que votre compte est l'authentification à deux facteurs)\
 ensuite dans le fichier `.env` sur votre symofony \
 `MAILER_DSN=smtp://your-email@gmail.com:your-password@smtp.gmail.com:587`\
