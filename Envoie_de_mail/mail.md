@@ -23,3 +23,49 @@ si le mail ne s'envoie pas et qu'il n'y a pas d'erreur manifeste\
 aller dans config/packages/messenger.yaml et mettez en commentaire : \
 ` Symfony\Component\Mailer\Messenger\SendEmailMessage: async`
 
+# Envoie d'un mail avec composer 
+dans le terminal `comoser require phpmailer/phpmailer`\
+ensuite dans src crée un dossier ou vous crée un fichier PHPMailService.php \
+dans le fichier : 
+`<?php
+
+namespace App\Service;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+
+class PHPMailerService extends PHPMailer
+{
+
+public function __construct() {
+// configuration du mailer
+$this->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+$this->isSMTP();                                            //Send using SMTP
+$this->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+$this->SMTPAuth   = true;                                   //Enable SMTP authentication
+$this->Username   = 'gasparsundermann62@gmail.com';                     //SMTP username
+$this->Password   = 'jtifsyevflbjuuhj';                               //SMTP password
+$this->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+$this->Port       = 465; 
+}
+
+}`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
