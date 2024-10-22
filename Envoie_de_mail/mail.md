@@ -16,4 +16,10 @@ $email->from('symfony6@gmail.com')
 ->text('Email')
 ->html('<h2>Texte email</h2>');
 $mailer->send($email);`
+puis ajouter un return si vous voulez pour confimer l'envoie du mail\
+
+## Erreur 
+si le mail ne s'envoie pas et qu'il n'y a pas d'erreur manifeste\
+aller dans config/packages/messenger.yaml et mettez en commentaire : \
+` Symfony\Component\Mailer\Messenger\SendEmailMessage: async`
 
